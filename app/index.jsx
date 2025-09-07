@@ -17,7 +17,7 @@ export default function Index() {
       {/* Button */}
       <Button 
        title="Get Started"
-       onPress={() => router.push('/(tabs)/home')} 
+       onPress={() => router.push('/home')} 
        isLoading={false}
        otherStyles={{position: "fixed", bottom: -160}}/>
     </SafeAreaView>

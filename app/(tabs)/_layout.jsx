@@ -1,23 +1,35 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
+import { Feather, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
-const TabIcon = ({ iconName, name, color, focused }) => {
+const TabIcon = ({
+  IconComponent,
+  iconName,
+  name,
+  color,
+  focused,
+  iconOtherStyles,
+}) => {
   return (
     <View
       style={{
         width: 80,
         justifyContent: "center",
         alignItems: "center",
-        gap: 1
+        gap: 1,
       }}
     >
-      <Ionicons name={iconName} size={24} color={color} />
+      <IconComponent
+        name={iconName}
+        size={24}
+        color={color}
+        style={iconOtherStyles}
+      />
       <Text
         style={{
-          fontWeight: focused ? "bold" : "normal",
-          fontSize: 13,
+          fontWeight: focused ? "700" : "normal",
+          fontSize: 12,
           color,
         }}
       >
@@ -31,9 +43,10 @@ const TabsLayout = () => {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "#4A90E2",
-        tabBarInactiveTintColor: "#33c",
+        tabBarActiveTintColor: "#0DA5D8",
+        tabBarInactiveTintColor: "#676767",
         tabBarStyle: {
           backgroundColor: "#f2f2f2",
           height: 83,
@@ -44,13 +57,13 @@ const TabsLayout = () => {
         name="home"
         options={{
           title: "Home",
-          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
+              IconComponent={Feather}
               name="Home"
               focused={focused}
               color={color}
-              iconName="home-outline"
+              iconName="home"
             />
           ),
         }}
@@ -59,13 +72,26 @@ const TabsLayout = () => {
         name="addmemory"
         options={{
           title: "Add-Memory",
-          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
-              name="Add Memory"
+              name=""
               focused={focused}
+              IconComponent={Ionicons}
               color={color}
-              iconName="add-circle-outline"
+              iconOtherStyles={{
+                width: 45,
+                height: 45,
+                backgroundColor: "#121212",
+                padding: 10,
+                color: "#ffffff",
+                borderRadius: 30,
+                shadowColor: "#000",
+                shadowOffset: { width: 0, height: 4 },
+                shadowOpacity: 0.25,
+                shadowRadius: 4,
+                elevation: 10,
+              }}
+              iconName="add"
             />
           ),
         }}
@@ -74,13 +100,13 @@ const TabsLayout = () => {
         name="collections"
         options={{
           title: "Collections",
-          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
+              IconComponent={MaterialCommunityIcons}
               name="Collections"
               focused={focused}
               color={color}
-              iconName="albums-outline"
+              iconName="image-multiple-outline"
             />
           ),
         }}
