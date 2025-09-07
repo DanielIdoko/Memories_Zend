@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Memory_App",
-    "slug": "Memory_App",
+    "name": "",
+    "slug": "Zend",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "scheme": "memoryapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -28,12 +28,13 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
