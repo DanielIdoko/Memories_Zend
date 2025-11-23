@@ -9,9 +9,9 @@ export default function Index() {
   return (
     <SafeAreaView style={indexStyles.indexPage}>
       <Image source={logo} style={indexStyles.image} resizeMode="contain" />
-      <Text style={indexStyles.mainText}>Welcome to Zend</Text>
+      <Text style={indexStyles.mainText}>Welcome</Text>
       <Text style={indexStyles.subText}>
-        A place where memories are remembered for the future.
+       Save your best memories for the future.
       </Text>
 
       {/* Button */}
@@ -19,7 +19,7 @@ export default function Index() {
        title="Get Started"
        onPress={() => router.push('/home')} 
        isLoading={false}
-       otherStyles={{position: "fixed", bottom: -160}}/>
+       otherStyles={{marginTop: 30, position: 'fixed', bottom: 20}}/>
     </SafeAreaView>
   );
 }

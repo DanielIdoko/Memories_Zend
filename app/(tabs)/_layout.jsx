@@ -56,6 +56,7 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="home"
         options={{
+          headerShown: false,
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
@@ -72,6 +73,7 @@ const TabsLayout = () => {
         name="addmemory"
         options={{
           title: "Add-Memory",
+          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               name=""
@@ -100,6 +102,7 @@ const TabsLayout = () => {
         name="collections"
         options={{
           title: "Collections",
+          headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               IconComponent={MaterialCommunityIcons}

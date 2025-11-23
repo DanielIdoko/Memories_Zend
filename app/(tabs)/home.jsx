@@ -12,13 +12,12 @@ const Home = () => {
         <View style={homeStyles.header}>
           <Text
             style={{
-              color: "#4B4C4C",
+              color: "#33c",
               flex: 1,
               fontSize: 14,
-              fontWeight: "bold",
             }}
           >
-            Hi, Welcome!
+            Welcome, user.
           </Text>
           <Feather
             name="menu"

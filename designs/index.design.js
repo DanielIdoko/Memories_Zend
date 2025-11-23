@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 const indexStyles = StyleSheet.create({
     image: {
-        width: 100,
-        height: 100,
+        width: 300,
+        height: 300,
         borderRadius: 30
     },
     indexPage: {
@@ -15,7 +15,8 @@ const indexStyles = StyleSheet.create({
         backgroundColor: "#f2f2f2"
     },
     mainText: {
-        fontSize: 30,
+        fontSize: 24,
+        marginTop: 16,
         padding: 5,
         fontWeight: "bold",
         fontFamily: "sans-serif",
